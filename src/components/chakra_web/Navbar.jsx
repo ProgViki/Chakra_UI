@@ -9,6 +9,8 @@ import {
   useColorModeValue 
 } from '@chakra-ui/react';
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
+     import { Link as RouterLink } from 'react-router-dom';
+
 
 const Navbar = () => {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -41,24 +43,32 @@ const Navbar = () => {
         </Text>
       </Flex>
 
-      <Flex 
-        display={{ base: "none", md: "flex" }} 
-        width={{ base: "full", md: "auto" }} 
-        alignItems="center"
-      >
-        <Link href="#" p={2} fontWeight="medium" _hover={{ color: 'teal.500' }}>
-          Docs
-        </Link>
-        <Link href="#" p={2} fontWeight="medium" _hover={{ color: 'teal.500' }}>
-          Components
-        </Link>
-        <Link href="#" p={2} fontWeight="medium" _hover={{ color: 'teal.500' }}>
-          Examples
-        </Link>
-        <Link href="#" p={2} fontWeight="medium" _hover={{ color: 'teal.500' }}>
-          Blog
-        </Link>
-      </Flex>
+<Flex 
+  display={{ base: "none", md: "flex" }} 
+  width={{ base: "full", md: "auto" }} 
+  alignItems="center"
+>
+  <RouterLink to="/docs">
+    <Button variant="ghost" fontWeight="medium" _hover={{ color: 'teal.500' }}>
+      Docs
+    </Button>
+  </RouterLink>
+  <RouterLink to="/components">
+    <Button variant="ghost" fontWeight="medium" _hover={{ color: 'teal.500' }}>
+      Components
+    </Button>
+  </RouterLink>
+  <RouterLink to="/examples">
+    <Button variant="ghost" fontWeight="medium" _hover={{ color: 'teal.500' }}>
+      Examples
+    </Button>
+  </RouterLink>
+  <RouterLink to="/blog">
+    <Button variant="ghost" fontWeight="medium" _hover={{ color: 'teal.500' }}>
+      Blog
+    </Button>
+  </RouterLink>
+</Flex>
 
       <Flex align="center">
         <Button 
