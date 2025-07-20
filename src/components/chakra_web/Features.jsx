@@ -5,6 +5,7 @@ import {
   Heading, 
   Text, 
   Icon, 
+  Flex,
   useColorModeValue 
 } from '@chakra-ui/react';
 import { FaAccessibleIcon, FaBolt, FaCode, FaPalette } from 'react-icons/fa';
